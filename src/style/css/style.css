@@ -1,0 +1,81 @@
+/* Layout */
+/* Colors */
+/* Typography */
+body {
+  margin: 0;
+}
+
+.container {
+  background: #ff7a7a url("../../../images/bg-intro-desktop.png") no-repeat center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10em 0 10em;
+}
+
+.info {
+  color: #fff;
+  margin-right: 3em;
+}
+
+.info__title {
+  margin: 0;
+  font-size: calc(3 * 1em);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.form {
+  width: 100%;
+}
+
+.form button, .form input {
+  border-radius: 5px;
+}
+
+.form__inputs {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__inputs input {
+  border: 1px solid #b9b6d3;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 1em;
+}
+
+::placeholder {
+  color: #3e3c49;
+}
+
+.form__btn {
+  border-style: none;
+}
+
+.form__terms {
+  font-size: 11px;
+  color: #b9b6d3;
+  text-align: center;
+}
+
+.form__terms a {
+  text-decoration: none;
+  color: #ff7a7a;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
