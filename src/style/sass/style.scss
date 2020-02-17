@@ -4,6 +4,8 @@ $desktop-size: 1440px;
 $bg-mobile: url("../../../images/bg-intro-mobile.png") no-repeat center;
 $bg-desktop: url("../../../images/bg-intro-desktop.png") no-repeat center;
 $radius: 5px;
+$block: 80%;
+$m-bottom: 1.5em;
 
 /* Colors */
 $primary-red: hsl(0, 100%, 74%);
@@ -12,6 +14,8 @@ $accent-blue: hsl(248, 32%, 49%);
 $neutral-dark-blue: hsl(249, 10%, 26%);
 $neutral-grayish-blue: hsl(246, 25%, 77%);
 $white: #fff;
+$shadow-blue: hsla(248, 5%, 49%, 0.4) 0 7px 2px;
+$shadow-green: hsl(154, 59%, 46%) 0 5px 1px;
 
 /* Typography */
 $font-size: 1em;
@@ -27,19 +31,22 @@ body {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3em;
+  align-content: center;
   background: $primary-red $bg-desktop;
+  background-size: cover;
   height: 100vh;
   font-family: $family;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10em 0 10em ;
 }
 
 // block info
 .info {
   color: $white;
-  margin-right: 3em;
+  max-width: $block;
+  justify-self: flex-end;
+  align-self: center;
 }
 
 .info__title {
@@ -49,13 +56,10 @@ body {
   line-height: 1.15;
 }
 
-.info__text {
-
-}
-
 // block form
 .form {
-  width: 100%;
+  max-width: $block;
+  align-self: center;
 }
 
 .form button, .form input {
@@ -64,40 +68,81 @@ body {
 
 .form__inputs {
   background-color: $white;
-  padding: 2em;
-  border-radius: $radius;
+  padding: 3em;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  // width: 100%;
 }
 
 .form__inputs input {
   border: 1px solid $neutral-grayish-blue;
-  padding: 10px 20px 10px 20px;
-  margin-bottom: 1em;
+  padding: 20px 30px 20px 30px;
+  margin-bottom: $m-bottom;
+  color: $neutral-dark-blue;
+  font-weight: $w-bold;
 }
 
 ::placeholder {
   color: $neutral-dark-blue;
+  font-weight: $w-semibold;
+}
+
+.form__inputs input:focus {
+  border: 1px solid $neutral-dark-blue;
 }
 
 .form__btn {
   border-style: none;
-  
+  padding: 20px;
+  color: $white;
+  cursor: pointer;
+}
+
+.form__btn--extra {
+  background-color: $accent-blue;
+  width: 100%;
+  margin-bottom: $m-bottom;
+  box-shadow: $shadow-blue;
+
+  &:active {
+    background-color: rgba($accent-blue, 0.75);
+  }
+}
+
+.form__btn--extra span {
+  font-weight: $w-bold;
+}
+
+.form__btn--submit {
+  background-color: $primary-green;
+  font-weight: $w-semibold;
+  text-transform: uppercase;
+  margin-bottom: $m-bottom;
+  box-shadow: $shadow-green;
+
+  &:active {
+    background-color: rgba($primary-green, 0.75);
+  }
 }
 
 .form__terms {
   font-size: $small-font;
   color: $neutral-grayish-blue;
   text-align: center;
+  margin: 0;
 }
 
 .form__terms a {
   text-decoration: none;
   color: $primary-red;
   font-weight: $w-bold;
+
+  &:active {
+    color: rgba($primary-red, 0.75);
+  }
 }
 
+// footer
 .attribution { 
   font-size: $small-font; 
   text-align: center;
