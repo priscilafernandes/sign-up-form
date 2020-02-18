@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" type="text/css" href="./src/style/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
     
     <title>Learn to Code - Sign up</title>
@@ -24,13 +24,24 @@
           <span>Try it free 7 days </span>then $20/mo. thereafter
         </button>
         
-        <form class="form__inputs">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
+        <form id="form-input" class="form__input">
+          <input id="name" class="form__input__item form__input__item--margin" type="text" placeholder="First Name">
+            <span id="name-msg"></span>
+          </input>
+
+          <input id="last-name" class="form__input__item form__input__item--margin" type="text" placeholder="Last Name">
+            <span id="last-name-msg"></span>
+          </input>
+
+          <input id="email" class="form__input__item form__input__item--margin" type="email" placeholder="Email Address">
+            <span id="email-msg"></span>
+          </input>
           
-          <button class="form__btn form__btn--submit" type="submit">Claim your free trial</button>
+          <input id="password" class="form__input__item form__input__item--margin" type="password" placeholder="Password">
+            <span id="password-msg"></span>
+          </input>
+
+          <button id="btn-submit" class="form__btn form__btn--submit" type="submit">Claim your free trial</button>
 
           <p class="form__terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
         </form>

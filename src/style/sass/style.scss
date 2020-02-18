@@ -66,7 +66,7 @@ body {
   border-radius: $radius;
 }
 
-.form__inputs {
+.form__input {
   background-color: $white;
   padding: 3em;
   border-radius: 10px;
@@ -74,12 +74,15 @@ body {
   flex-direction: column;
 }
 
-.form__inputs input {
+.form__input__item {
   border: 1px solid $neutral-grayish-blue;
   padding: 20px 30px 20px 30px;
-  margin-bottom: $m-bottom;
   color: $neutral-dark-blue;
   font-weight: $w-bold;
+
+  &:focus {
+    border: 1px solid $neutral-dark-blue;
+  }
 }
 
 ::placeholder {
@@ -87,8 +90,21 @@ body {
   font-weight: $w-semibold;
 }
 
-.form__inputs input:focus {
-  border: 1px solid $neutral-dark-blue;
+.form__input__item--margin {
+  margin-bottom: $m-bottom;
+}
+
+.error-icon {
+  background: url("../../../images/icon-error.svg") no-repeat 90%;
+}
+
+.error-msg {
+  font-size: $small-font;
+  font-style: italic;
+  font-weight: $w-semibold;
+  color: $primary-red;
+  text-align: right;
+  margin: 0.5em 0 $m-bottom 0;
 }
 
 .form__btn {
