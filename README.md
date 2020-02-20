@@ -6,4 +6,4 @@ Modelo de formulário *sign up* seguindo o layout abaixo:
 
 Desafio feito por [Frontend Mentor](https://www.frontendmentor.io). Deploy realizado no [ZEIT Now](https://zeit.co).
 
-[Confira o resultado aqui!](https://sign-up-form.now.sh)
+[Confira o resultado aqui!](https://sign-up-form-psi.now.sh)
